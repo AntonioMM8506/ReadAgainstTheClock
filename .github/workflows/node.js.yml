@@ -21,11 +21,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    #For using Node.js
     - name: Set up Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
 
+    #For caching the dependencies, so the pipeline doesn't take 
+    #too long. Only when a  new dependency is added, all the 
+    #packages are installed once again.
     - name: Cache dependencies
       uses: actions/cache@v2
       with:
@@ -45,6 +49,8 @@ jobs:
     - name: Build
       run: npm run build
 
+    #For deploying the application. A token with a certain life time is added.
+    #The username and the email does not have to be necessary the real ones
     - name: Deploy
       run: |
         git config --global user.name $user_name
