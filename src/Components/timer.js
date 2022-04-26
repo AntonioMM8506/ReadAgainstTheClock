@@ -1,10 +1,12 @@
-import React from 'react';
+import logo from '../clock_logo_2.png';
+import React, { useState } from 'react';
 import './timer.css';
 
 const Timer = () => {
     //Hooks approach
     const [time, setTime] = React.useState(0);
     const [timerOn, setTimeOn] = React.useState(false);
+    const [isActive, setActive] = React.useState(false);
     
     //Uses an interval that can be modified with the setinterval method
     //inside this method one can define the conditions mo modify the given
@@ -18,33 +20,56 @@ const Timer = () => {
             setTime(prevTime => prevTime + 1);
         }, 1000);
         }else{ //Timer stops
-        clearInterval(interval);
+            clearInterval(interval);
         }
 
         return () => clearInterval(interval); // to avoid memory leaks
-
     }, [timerOn]); //runs every time the variable timeOn changes
 
-    //Render
+    const toggleClass = () => {
+        setActive(true);
+    };
+
+    const negativeToggleClass = () => {
+        setActive(false);
+    };
+
+
+    //Render ------------------------------------------------------------------------------------
     return (
         <div className='container'>
+            <img src={logo} id='App-logo' className={isActive ? 'App-logo' : null} alt="logo" />
+
             <div className='timer_container'>
-            <h1>
-                <span>{("0" + Math.floor((time/6000)%60)).slice(-2)}:</span> {/*Hours*/}
-                <span>{("0" + Math.floor((time/1000)%60)).slice(-2)}:</span> {/*minutes*/}
-                <span>{("0" + ((time)%100)).slice(-2)}</span> {/*Seconds*/}
-            </h1>
+                <h1>
+                    <span>{("0" + Math.floor((time/6000)%60)).slice(-2)}:</span> {/*Hours*/}
+                    <span>{("0" + Math.floor((time/1000)%60)).slice(-2)}:</span> {/*minutes*/}
+                    <span>{("0" + ((time)%100)).slice(-2)}</span> {/*Seconds*/}
+                </h1>
                 <div>
-                    <button className='resume' onClick={() => setTimeOn(true)}>Start</button>
-                    <button className='stop' onClick={() => setTimeOn(false)}>Stop</button>
-                    <button className='resume' onClick={() => setTimeOn(true)}>Resume</button>
-                    <button className='reset' onClick={() => setTime(0)}>Reset</button> 
+                    {/*If  the timer is in 00s, then the Start button has a different style than
+                    when the clock has started running*/}
+                    { time === 0 ? 
+                        <button id='actionButton' className='start' onClick={() => {
+                            toggleClass();
+                            setTimeOn(true);
+                        }}>Start</button> :
+                        <button id='actionButton' className='resume' onClick={() => {
+                            toggleClass();
+                            setTimeOn(true);
+                        }}>Resume</button>
+                    }
+                    <button id='actionButton' className='stop' onClick={() => {
+                        setTimeOn(false);
+                        negativeToggleClass();
+                    } }>Stop</button>
+                    <button id='actionButton' className='reset' onClick={() => setTime(0)}>Reset</button> 
                 </div>
             </div>
         </div>
 
     )//End of return
 
-}//End of Tmer
+}//End of Timer
 
 export default Timer;

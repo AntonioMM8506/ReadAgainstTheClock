@@ -1,3 +1,31 @@
+
+:root{
+    --start: skyblue;
+}
+
+/* Logo ------------------------------------------- */
+#App-logo {
+    height: 40vmin;
+    margin-bottom: 50px;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Timer ------------------------------------------ */
 .timer{
     width: 100%;
     height: 100vh;
@@ -12,19 +40,19 @@
 
 .timer_container{
     background-color: #fff;
-    width: 40vw;
+    width: 30vw;
     padding: 1rem 6rem;
     border-radius: 1rem;
     box-shadow: 0 1rem 1rem -0.7rem rgb(0,0,0,0.4);
     color: black;
 }
 
-.stop{
+/* Buttons ---------------------------------------- */
+#actionButton{
     margin-top: 20px;
     margin-bottom: 20px;
     color: #fff;
     font-size: 18px;
-    background-color: red;
     width: 120px;
     height: 50px;
     border: none;
@@ -33,33 +61,18 @@
     margin-left: 5px;
 }
 
-
+.stop{
+    background-color: red;
+}
 
 .reset{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #fff;
-    font-size: 18px;
     background-color: green;
-    width: 120px;
-    height: 50px;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    margin-left: 5px;
 }
 
 .resume{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #fff;
-    font-size: 18px;
-    background-color: skyblue;
-    width: 120px;
-    height: 50px;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    margin-left: 5px;
+    background-color: black;
 }
 
+.start{
+    background-color: var(--start);
+}
