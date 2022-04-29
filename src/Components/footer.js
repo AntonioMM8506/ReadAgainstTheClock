@@ -6,13 +6,12 @@ const Footer = () => {
 
     return (
         <div className='footer'>
-            <p>Thanks for using this app. You can see my other projects at: 
+            <p>Thanks for using this app. You can see my other projects at: &nbsp;  
                 <a href="https://github.com/AntonioMM8506" target="_blank" rel="noopener noreferrer">
-                    <span> GitHub</span></a></p>
+                    <span>GitHub</span></a></p>
         </div>
-    ) 
-
-
+    )//End of render
+    
 }//End of Footer
 
 export default Footer;

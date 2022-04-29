@@ -16,7 +16,7 @@
 
 .App-logo-run{
     animation-name: spin;
-    animation-duration: 5000ms;
+    animation-duration: 7500ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear; 
 }

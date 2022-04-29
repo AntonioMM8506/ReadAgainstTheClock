@@ -1,4 +1,4 @@
-import logo from '../clock_logo_2.png';
+import logo from './img/clock_logo_3.png';
 import React from 'react';
 import './timer.css';
 
@@ -8,17 +8,16 @@ const Timer = () => {
     const [timerOn, setTimeOn] = React.useState(false);
     const [isActive, setActive] = React.useState(false);
     
-    //Uses an interval that can be modified with the setinterval method
-    //inside this method one can define the conditions mo modify the given
-    //interval. With the method clearInterval, the given interval is stoped
-    //However, because of the hooks it is not reset as in a normal use.
+    //Uses an interval that can be modified with the setinterval method inside this method 
+    //one can define the conditions mo modify the given interval. With the method clearInterval, 
+    //the given interval is stoped. However, because of the hooks it is not reset as in a normal use.
     React.useEffect(() => {
         let interval = null;
 
         if(timerOn){ //Timer starts
         interval = setInterval(() => {
-            setTime(prevTime => prevTime + 1);
-        }, 1000);
+            setTime(prevTime => prevTime + 10);
+        }, 10);
         }else{ //Timer stops
             clearInterval(interval);
         }
@@ -26,6 +25,7 @@ const Timer = () => {
         return () => clearInterval(interval); // to avoid memory leaks
     }, [timerOn]); //runs every time the variable timeOn changes
 
+    
     //Functions for the animation of the clock.
     const toggleClass = () => {
         setActive(true);
@@ -43,9 +43,9 @@ const Timer = () => {
 
             <div className='timer_container'>
                 <h1>
-                    <span>{("0" + Math.floor((time/6000)%60)).slice(-2)}:</span> {/*Hours*/}
-                    <span>{("0" + Math.floor((time/1000)%60)).slice(-2)}:</span> {/*minutes*/}
-                    <span>{("0" + ((time)%100)).slice(-2)}</span> {/*Seconds*/}
+                    <span>{("0" + Math.floor((time/60000)%60)).slice(-2)}:</span> {/*minutes*/}
+                    <span>{("0" + Math.floor((time/1000)%60)).slice(-2)}:</span> {/*seconds*/}
+                    <span>{("0" + ((time/10)%100)).slice(-2)}</span> {/*miliseconds*/}
                 </h1>
                 <div>
                     {/*Run*/}
