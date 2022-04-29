@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from './Components/footer';
 import Timer from './Components/timer';
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
         <Timer></Timer>
       </header>
       
-      
+      <Footer></Footer>
     </div>
   );
 
