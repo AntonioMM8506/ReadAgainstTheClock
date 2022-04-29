@@ -26,6 +26,7 @@ const Timer = () => {
         return () => clearInterval(interval); // to avoid memory leaks
     }, [timerOn]); //runs every time the variable timeOn changes
 
+    //Functions for the animation of the clock.
     const toggleClass = () => {
         setActive(true);
     };
@@ -38,7 +39,7 @@ const Timer = () => {
     //Render ------------------------------------------------------------------------------------
     return (
         <div className='container'>
-            <img src={logo} id='App-logo' className={isActive ? 'App-logo' : null} alt="logo" />
+            <img src={logo} id='App-logo' className='App-logo-run' style={{animationPlayState: isActive? 'running':'paused' }} alt="logo" />
 
             <div className='timer_container'>
                 <h1>
@@ -47,23 +48,32 @@ const Timer = () => {
                     <span>{("0" + ((time)%100)).slice(-2)}</span> {/*Seconds*/}
                 </h1>
                 <div>
-                    {/*If  the timer is in 00s, then the Start button has a different style than
-                    when the clock has started running*/}
-                    { time === 0 ? 
+                    {/*Run*/}
+                    {   
+                        time === 0 ? 
                         <button id='actionButton' className='start' onClick={() => {
                             toggleClass();
                             setTimeOn(true);
-                        }}>Start</button> :
+                        }}>Start</button> 
+                        :
                         <button id='actionButton' className='resume' onClick={() => {
                             toggleClass();
                             setTimeOn(true);
                         }}>Resume</button>
                     }
+
+                    {/*Pause/Stop*/}
                     <button id='actionButton' className='stop' onClick={() => {
                         setTimeOn(false);
                         negativeToggleClass();
-                    } }>Stop</button>
-                    <button id='actionButton' className='reset' onClick={() => setTime(0)}>Reset</button> 
+                    } }>Pause</button>
+
+                    {/*Reset*/}
+                    <button id='actionButton' className='reset' onClick={() =>{
+                        setTime(0);
+                        setTimeOn(false);
+                    }}>Reset</button>
+                    
                 </div>
             </div>
         </div>
