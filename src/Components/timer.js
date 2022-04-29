@@ -54,6 +54,7 @@ const Timer = () => {
                         <button id='actionButton' className='start' onClick={() => {
                             toggleClass();
                             setTimeOn(true);
+                            document.getElementById('App-logo').classList.add("App-logo-run");
                         }}>Start</button> 
                         :
                         <button id='actionButton' className='resume' onClick={() => {
@@ -72,6 +73,9 @@ const Timer = () => {
                     <button id='actionButton' className='reset' onClick={() =>{
                         setTime(0);
                         setTimeOn(false);
+                        negativeToggleClass();
+                        document.getElementById('App-logo').classList.remove("App-logo-run");
+                    
                     }}>Reset</button>
                     
                 </div>

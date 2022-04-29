@@ -1,6 +1,9 @@
 
 :root{
-    --start: skyblue;
+    --start: #47E720;
+    --resume: #1AE8A7;
+    --pause: #E8361A;
+    --reset: black;
 }
 
 /* Logo ------------------------------------------- */
@@ -73,15 +76,15 @@
 }
 
 .stop{
-    background-color: red;
+    background-color: var(--pause);
 }
 
 .reset{
-    background-color: green;
+    background-color: var(--reset);
 }
 
 .resume{
-    background-color: black;
+    background-color: var(--resume);
 }
 
 .start{
