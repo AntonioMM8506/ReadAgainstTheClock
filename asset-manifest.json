@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ReadAgainstTheClock/static/css/main.1adbc74b.css",
-    "main.js": "/ReadAgainstTheClock/static/js/main.f6d304b6.js",
+    "main.css": "/ReadAgainstTheClock/static/css/main.7b9d2d1c.css",
+    "main.js": "/ReadAgainstTheClock/static/js/main.651fb7bc.js",
     "static/js/787.548f0ab4.chunk.js": "/ReadAgainstTheClock/static/js/787.548f0ab4.chunk.js",
-    "static/media/clock_logo_2.png": "/ReadAgainstTheClock/static/media/clock_logo_2.953431617d2f02b92af6.png",
+    "static/media/clock_logo_3.png": "/ReadAgainstTheClock/static/media/clock_logo_3.a33e3b8deeba6a77524e.png",
     "index.html": "/ReadAgainstTheClock/index.html",
-    "main.1adbc74b.css.map": "/ReadAgainstTheClock/static/css/main.1adbc74b.css.map",
-    "main.f6d304b6.js.map": "/ReadAgainstTheClock/static/js/main.f6d304b6.js.map",
+    "main.7b9d2d1c.css.map": "/ReadAgainstTheClock/static/css/main.7b9d2d1c.css.map",
+    "main.651fb7bc.js.map": "/ReadAgainstTheClock/static/js/main.651fb7bc.js.map",
     "787.548f0ab4.chunk.js.map": "/ReadAgainstTheClock/static/js/787.548f0ab4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1adbc74b.css",
-    "static/js/main.f6d304b6.js"
+    "static/css/main.7b9d2d1c.css",
+    "static/js/main.651fb7bc.js"
   ]
 }
