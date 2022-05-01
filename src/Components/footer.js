@@ -6,7 +6,7 @@ const Footer = () => {
 
     return (
         <div className='footer'>
-            <p>Thanks for using this app. You can see my other projects at: &nbsp;  
+            <p>Thanks for using this app. You can see my other projects at my&nbsp;  
                 <a href="https://github.com/AntonioMM8506" target="_blank" rel="noopener noreferrer">
                     <span>GitHub</span></a></p>
         </div>
