@@ -5,6 +5,7 @@ import ringer from './sound/alarm_sound1.mp3'
 
 function Alarm( props ) {
 
+    //For playing an audio
     const audio = new Audio(ringer);
     audio.loop = true;
 
@@ -12,7 +13,6 @@ function Alarm( props ) {
         setTimeout(function(){
             window.location.reload(true);
         }, 50000);
-
     }
 
     return (props.trigger) ? (
