@@ -9,6 +9,7 @@ function Alarm( props ) {
     const audio = new Audio(ringer);
     audio.loop = true;
 
+    //For refreshing the page after 1 minute
     function refreshPage() {
         setTimeout(function(){
             window.location.reload(true);
