@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/ReadAgainstTheClock/static/css/main.7b9d2d1c.css",
-    "main.js": "/ReadAgainstTheClock/static/js/main.651fb7bc.js",
+    "main.css": "/ReadAgainstTheClock/static/css/main.63f8206a.css",
+    "main.js": "/ReadAgainstTheClock/static/js/main.9833e6d1.js",
     "static/js/787.548f0ab4.chunk.js": "/ReadAgainstTheClock/static/js/787.548f0ab4.chunk.js",
+    "static/media/alarm_sound1.mp3": "/ReadAgainstTheClock/static/media/alarm_sound1.f0c9d8c55bbd1ab92aad.mp3",
+    "static/media/alarm.png": "/ReadAgainstTheClock/static/media/alarm.8869e346d54fa3c0695e.png",
     "static/media/clock_logo_3.png": "/ReadAgainstTheClock/static/media/clock_logo_3.a33e3b8deeba6a77524e.png",
     "index.html": "/ReadAgainstTheClock/index.html",
-    "main.7b9d2d1c.css.map": "/ReadAgainstTheClock/static/css/main.7b9d2d1c.css.map",
-    "main.651fb7bc.js.map": "/ReadAgainstTheClock/static/js/main.651fb7bc.js.map",
+    "main.63f8206a.css.map": "/ReadAgainstTheClock/static/css/main.63f8206a.css.map",
+    "main.9833e6d1.js.map": "/ReadAgainstTheClock/static/js/main.9833e6d1.js.map",
     "787.548f0ab4.chunk.js.map": "/ReadAgainstTheClock/static/js/787.548f0ab4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b9d2d1c.css",
-    "static/js/main.651fb7bc.js"
+    "static/css/main.63f8206a.css",
+    "static/js/main.9833e6d1.js"
   ]
 }
