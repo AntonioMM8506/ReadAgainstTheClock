@@ -10,7 +10,7 @@
 /* Logo ------------------------------------------- */
 #App-logo {
     height: 40vmin;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     pointer-events: none;
 }
 
@@ -79,6 +79,11 @@
 .resume{
     background-color: var(--resume);
     animation: fadein ease 1s;
+}
+
+.setTimer{
+    background-color: blue;
+    align-self: center;
 }
 
 @keyframes fadein {
